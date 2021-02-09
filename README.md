@@ -1,1 +1,0 @@
-# JavaScript-Uppgift-2
