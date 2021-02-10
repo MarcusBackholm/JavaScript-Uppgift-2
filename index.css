@@ -3,7 +3,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 body{
@@ -32,8 +32,8 @@ body{
 
 .searchbar{
     position: relative;
-    left: 1000px;
-    top: 5px;
+    left: 950px;
+    top: 35px;
     color: black
 }
 
@@ -46,7 +46,8 @@ body{
     border: 2px solid;
     position: relative;
     left: 1000px;
-    top: 50px;
+    top: 85px;
+    text-align: center;
 }
 
 .box2{
@@ -57,8 +58,9 @@ body{
     background-color: rgba(54, 54, 54, 0.308);
     border: 2px solid;
     position: relative;
-    left: 300px;
-    top: 100px;
+    left: 490px;
+    top: 101px;
+    text-align: center;
 }
 
 .box3{
@@ -71,6 +73,7 @@ body{
     position: relative;
     left: 1000px;
     top: -213px;
+    text-align: center;
 }
 
 .box4{
@@ -81,8 +84,9 @@ body{
     background-color: rgba(54, 54, 54, 0.308);
     border: 2px solid;
     position: relative;
-    left: 1750px;
-    top: -522px;
+    left: 1513px;
+    top: -526px;
+    text-align: center;
 }
 
 .footer{
