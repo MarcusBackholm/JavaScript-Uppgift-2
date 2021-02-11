@@ -97,6 +97,19 @@ body{
     text-align: center;
 }
 
+.box5{
+    width: 5%;
+    height: 400px;
+    padding: 10px;
+    margin: 100px;
+    background-color: rgba(54, 54, 54, 0.308);
+    border: 2px solid;
+    position: relative;
+    left: 2250px;
+    top: -1300px;
+    text-align: center;
+}
+
 .footer{
     position: fixed;
     left: 0;
