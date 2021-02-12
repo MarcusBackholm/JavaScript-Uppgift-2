@@ -1,6 +1,7 @@
 let button = document.querySelector('mybutton');
 let searchbar = document.querySelector('searchbar');
 
+let day = document.querySelector('day')
 let cityname = document.querySelector('cityname')
 let day = document.querySelector('day')
 let temp = document.querySelector('temp')

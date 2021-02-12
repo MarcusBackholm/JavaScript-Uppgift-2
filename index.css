@@ -38,13 +38,6 @@ body{
     border: 2px solid;
 }
 
-.searchbar{
-    position: relative;
-    left: 950px;
-    top: 35px;
-    color: black
-}
-
 .box1{
     width: 15%;
     height: 200px;
