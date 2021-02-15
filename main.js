@@ -1,31 +1,22 @@
-// Declaring variables to ID elements
+// searchbar       ID = searchbar         TYPE = text
+// input           ID = inputText         TYPE = text        PLACEHOLDER = Search for destinaton
+// button          ID = button            TYPE = submit
+// checkbox 1      ID = onlyWeather       TYPE = Checkbox    NAME = travel-information1 
+// checkbox 2      ID = onlyAttraction    TYPE = Checkbox    NAME = travel-information2
+// checkbox 3      ID = sortAlphabetic    TYPE = Checkbox    NAME = travel-information3
+// day             ID = day
+//                 ID = cityName
+//                 ID = temp
+//                 ID = condition
+//                 ID = name
+//                 ID = adress
+//                 ID = description
 
-let button = document.querySelector('buttonSearch'); // The button.
-let searchbar = document.querySelector('searchbar'); // The searchbar.
-let day = document.querySelector('day') // What day it is.
-let temperature = document.querySelector('temp') // The remperature.
-let conditions = document.querySelector('conditions') // The weather conditions.
-let cityname = document.querySelector('cityname') // The name of the city.
-let adress = document.querySelector('adress') // The specified adress.
-let description = document.querySelector('description') // Information at each attraction place.
+//           Foursquare API
+// client id key: X5MAVFZN1F5NGMFX1LZ0P2MDFYQEQHPLT0R503XHOJMLEFGY
+// client Secret key: CXO3WOL1BKKHSHCOE3N4XE3T5DRMVFQOW3BVHU5APWCKTC1Q
+//
 
-// Creating event calls with button.
-
-
-
-//make the button get the API value when searching on citys with given information from API.
-button.addEventListener('click', function(){
-    fetch('http://api.openweathermap.org/data/2.5/weather?q= '+inputText.value+' &appid=d9af8ba6b94987343a5e32bf943c0cd0')
-    .then(Response => Response.json())
-    .then(data => {
-        let nameValue = data['city'];
-        let tempValue = data['main']['temp'];
-        let description = data['weather'][0]['description'];
-
-        city.innerHTML =nameValue;
-        temp.innerHTML = tempValue;
-        description.innerHTML = descriptionValue
-    })
-
-    .catch(Error => alert('Wrong city name!'))
-})
+//           OpenWeather API
+// APIkey: d9af8ba6b94987343a5e32bf943c0cd0
+// URL: https://api.openweathermap.org/data/2.5/weather
