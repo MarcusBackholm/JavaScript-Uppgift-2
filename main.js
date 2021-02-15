@@ -1,15 +1,17 @@
 // input           ID = inputText         TYPE = text        PLACEHOLDER = Search for destinaton
 // button          ID = button            TYPE = submit
+
 // checkbox 1      ID = onlyWeather       TYPE = Checkbox    NAME = travel-information1 
 // checkbox 2      ID = onlyAttraction    TYPE = Checkbox    NAME = travel-information2
 // checkbox 3      ID = sortAlphabetic    TYPE = Checkbox    NAME = travel-information3
-// day             ID = day
-// the cityname    ID = cityName
-// the temperature ID = temp
-// weather condition ID = condition
-//                 ID = name
+
+//                 ID = cityName
+//                 ID = temperature
+//                 ID = weather
+
+//                 ID = attractionName
 //                 ID = adress
-//                 ID = description
+//                 ID = information
 
 //           Foursquare API
 // client id key:     X5MAVFZN1F5NGMFX1LZ0P2MDFYQEQHPLT0R503XHOJMLEFGY
@@ -30,5 +32,6 @@ const URL  = 'https://api.foursquare.com/v2/venues/explore?near';
 const openWeatherApi = 'd9af8ba6b94987343a5e32bf943c0cd0'
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
-const input = $('#inputText');
-const submit = $('#button')
+var button = document.querySelector('.button')
+var inputText = document.querySelector('input')
+var name = document.querySelector('.name');

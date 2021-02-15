@@ -33,7 +33,7 @@ input{
     top: 35px;
 }
 
-#city {
+#search {
     position: relative;
     top: 28px;
     width: 300px;
@@ -46,7 +46,7 @@ input{
     padding-left: 4px;
 }
 
-#name {
+#attractionName {
     position: relative;
     top: -100px;
 }
@@ -56,15 +56,9 @@ input{
     top: -85px;
 }
 
-#description {
+#information {
     position: relative;
     top: -85px;
-}
-
-#day {
-    position: relative;
-    top: -110px;
-    font-size: 50px;
 }
 
 #cityName {
@@ -72,9 +66,9 @@ input{
     top: -80px;
 }
 
-#temp {
+#Temperature {
     position: relative;
-    top: -70px;
+    top: -60px;
 }
 
 #weather {
