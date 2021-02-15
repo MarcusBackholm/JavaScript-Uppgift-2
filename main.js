@@ -36,7 +36,7 @@ const inputSearch = document.querySelector('#search') // Refering to Searchbar I
 // Getting weather API information. 
 function WeatherBalloon( search ) {
     var key = '{X5MAVFZN1F5NGMFX1LZ0P2MDFYQEQHPLT0R503XHOJMLEFGY}';
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+ inputSearch.value +'&appid=d9af8ba6b94987343a5e32bf943c0cd0')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+ inputSearch.value +'&units=metric&appid=d9af8ba6b94987343a5e32bf943c0cd0')
     .then(function(resp) { return resp.json() }) // Convert data to json
     .then(function(data) {
         const city = data.name; // konstant för sökvärde 
