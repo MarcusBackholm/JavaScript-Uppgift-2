@@ -1,100 +1,115 @@
 <!DOCTYPE html>
-     <html lang="en">
+<html lang="en">
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="index.css">
-     <title>City Travel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="index.css">
+<title>City Travel</title>
+
 </head>
-           <body class="body">
-               <div class="header">
-                   <a class="headertext">City Travel</a>
-               </div>
-               <div class="searchWindow"> <!-- Class for searchwindow-->
-                   <div id="searchbar" type=text style="position: relative; left: 950px; top: 35px; color: black"> <!-- Id for searchbar with type of text-->
-                       <input id="inputText" type="text" placeholder="Search for destination.." style="height: 50px; width: 300px; color: black;">
-                   </div>
-                   <button id="button" type="submit" style="width: 150px; height: 50px; position: relative; left: 1280px; top: -18px; color: black;">GO!</button> <!-- creating button with ID-->
-                   <form>
-                       <input style="position: relative; left: 1450px; top: -70px;"type="checkbox" id="onlyWeather" name="travel-information1"> <!-- first checkbox with ID-->
-                       <label style="position: relative; left: 1450px; top: -70px;"for="travel-information1">Only weather</label>
-                       <br>
-                       <input style="position: relative; left: 1450px; top: -70px;"type="checkbox" id="onlyAttraction" name="travel-information2"> <!-- second checkbox with ID-->
-                       <label style="position: relative; left: 1450px; top: -70px;"for="travel-information1">Only attractions</label>
-                       <br>
-                       <input style="position: relative; left: 1450px; top: -70px;"type="checkbox" id="sortAlphabetic" name="travel-information3"> <!-- third checkbox with ID-->
-                       <label style="position: relative; left: 1450px; top: -70px;"for="travel-information1">Filter alpabetically</label>
-                       <br>
-                   </form>
-               </div> 
-               <main>
-               <div class="box1"> <!-- Class box one!-->
-                   <p style="font-size: 50px; position: relative; top: -110px;">Current weather</p>
-                   <br/>
-                   <p style="position: relative; top: -110px; font-size: 50px;" id="day">Day: Sunday</p>
-                <h1 id="cityName" style="position: relative; top: -80px;">City: Göteborg</h1>
-                <br />
-                <h2 id="temp" style="position: relative; top: -70px;">Temperature: 1</h2>
-                <br />
-                <h2 id="condition" style="position: relative; top: -50px;">Condition: Sunny, no winds</h2>
-               </div>
-               <div class="box2"> <!-- Class box two!-->
-                <p style="font-size: 50px; position: relative; top: -110px;">attractions</p>
-                <br/>
-                <h1 id="name" style="position: relative; top: -100px;">Stadium Outlet</h1>
-                <br>
-                <h1 id="adress" style="position: relative; top: -85px;">Adress: Lundaskog 2B</h1>
-                <br />
-                <h1 id="description" style="position: relative; top: -70px;">Here you can buy accessories</h1>
-               </div>
-               <div class="box3"> <!-- Class box three!-->
-                <h1 id="name" style="position: relative; top: -22px;">Sybilla</h1>
-                <br>
-                <h1 id="adress" style="position: relative; top: -7px;">Adress: Lundaskog 2B</h1>
-                <br />
-                <h1 id="description" style="position: relative; top: 10px;">Here you can eat</h1>
-               </div>
-               <div class="box4"> <!-- Class box four!-->
-                <h1 id="name" style="position: relative; top: -22px;">Western blue</h1>
-                <br>
-                <h1 id="adress" style="position: relative; top: -7px;">Adress: Lundaskog 2B</h1>
-                <br />
-                <h1 id="description" style="position: relative; top: 10px;">Here you can sleep</h1>
-               </div>
-               <div class="box5"> <!-- Class box five-->
-                <p style="font-size: 22px; position: relative; top: -35px;">Top 20 search</p>
-                <ol class='list'> <!-- Just a list of top 20 search, no function at all-->
-                    <li class="animals">1. Stockholm</li> 
-                    <li class="animals">2. Tokyo</li> 
-                    <li class="animals">3. Delhi</li> 
-                    <li class="animals">4. Shanghai</li> 
-                    <li class="animals">5. São Paulo</li> 
-                    <li class="animals">6. Mexico City</li> 
-                    <li class="animals">7. Cairo</li> 
-                    <li class="animals">8. Mumbai</li> 
-                    <li class="animals">9. Beijing</li> 
-                    <li class="animals">10. Dhaka</li> 
-                    <li class="animals">11. Osaka</li>
-                    <li class="animals">12. New York City</li>
-                    <li class="animals">13. Karachi</li>
-                    <li class="animals">14. Buenos Aires</li>
-                    <li class="animals">15. Chongqing</li>
-                    <li class="animals">16. Istanbul</li>
-                    <li class="animals">17. Kolkata</li>
-                    <li class="animals">18. Manila</li>
-                    <li class="animals">19. Lagos</li>
-                    <li class="animals">20. Rio de Janeiro</li> 
-                </ol> 
-               </div>
-            </main>
-            <script src="main.js"></script> <!--Kopplar samman Java dokumentet-->
-          </body>
-          <div class="footer"> <!-- footer on page for contact information-->
-            <p>
-                <a style="color:aliceblue;" >Contact: </a>
-                <a style="color: aliceblue;" href="mailto:Marcus.Backholm@live.se">Marcus.Backholm@live.se</a>
-                <a style="color: aliceblue;"> Phone: </a>
-                <a style="color:aliceblue;" href="tel:+46 73 924 79 77">+46 73 924 79 77</a>
-            </p>
-            </div>
-    </html>
+<body class="body">
+<div class="header">
+<a class="headertext">City Travel</a>
+</div>
+<div class="searchWindow"> <!-- Class for searchwindow-->
+<div id="searchbar" type=text style="position: relative; left: 950px; top: 35px; color: black"> <!-- Id for searchbar with type of text-->
+<input id="inputText"
+       type="text"
+       class="searchBar" 
+       placeholder="Search for destination.." 
+       style="height: 50px; width: 300px; color: black;">
+</div>
+<button id="button" type="submit" style="width: 150px; height: 50px; position: relative; left: 1280px; top: -18px; color: black;">GO!</button> <!-- creating button with ID-->
+<form>
+<input style="position: relative; left: 1450px; top: -70px;"
+       type="checkbox" 
+       id="onlyWeather" 
+       name="travel-information1"> <!-- first checkbox with ID-->
+<label style="position: relative; left: 1450px; top: -70px;"for="travel-information1">Only weather</label>
+<br>
+<input style="position: relative; left: 1450px; top: -70px;"
+       type="checkbox" 
+       id="onlyAttraction" 
+       name="travel-information2"> <!-- second checkbox with ID-->
+<label style="position: relative; left: 1450px; top: -70px;"for="travel-information1">Only attractions</label>
+<br>
+<input style="position: relative; left: 1450px; top: -70px;"
+       type="checkbox" 
+       id="sortAlphabetic" 
+       name="travel-information3"> <!-- third checkbox with ID-->
+<label style="position: relative; left: 1450px; top: -70px;"for="travel-information1">Filter alpabetically</label>
+<br>
+</form>
+</div> 
+<main>
+<div class="box1"> <!-- Class box one!-->
+<p style="font-size: 50px; position: relative; top: -110px;">Current weather</p>
+<br/>
+<p style="position: relative; top: -110px; font-size: 50px;"
+   id="day">Day: Sunday</p>
+<h1 id="cityName" style="position: relative; top: -80px;">City: Göteborg</h1>
+<br />
+<h2 id="temp" style="position: relative; top: -70px;">Temperature: 1</h2>
+<br />
+<h2 id="condition" style="position: relative; top: -50px;">Condition: Sunny, no winds</h2>
+</div>
+<div class="box2"> <!-- Class box two!-->
+<p style="font-size: 50px; position: relative; top: -110px;">attractions</p>
+<br/>
+<h1 id="name" style="position: relative; top: -100px;">Stadium Outlet</h1>
+<br>
+<h1 id="adress" style="position: relative; top: -85px;">Adress: Lundaskog 2B</h1>
+<br />
+<h1 id="description" style="position: relative; top: -70px;">Here you can buy accessories</h1>
+</div>
+<div class="box3"> <!-- Class box three!-->
+<h1 id="name" style="position: relative; top: -22px;">Sybilla</h1>
+<br>
+<h1 id="adress" style="position: relative; top: -7px;">Adress: Lundaskog 2B</h1>
+<br />
+<h1 id="description" style="position: relative; top: 10px;">Here you can eat</h1>
+</div>
+<div class="box4"> <!-- Class box four!-->
+<h1 id="name" style="position: relative; top: -22px;">Western blue</h1>
+<br>
+<h1 id="adress" style="position: relative; top: -7px;">Adress: Lundaskog 2B</h1>
+<br />
+<h1 id="description" style="position: relative; top: 10px;">Here you can sleep</h1>
+</div>
+<div class="box5"> <!-- Class box five-->
+<p style="font-size: 22px; position: relative; top: -35px;">Top 20 search</p>
+<ol class='list'> <!-- Just a list of top 20 search, no function at all-->
+<li class="animals">1. Stockholm</li> 
+<li class="animals">2. Tokyo</li> 
+<li class="animals">3. Delhi</li> 
+<li class="animals">4. Shanghai</li> 
+<li class="animals">5. São Paulo</li> 
+<li class="animals">6. Mexico City</li> 
+<li class="animals">7. Cairo</li> 
+<li class="animals">8. Mumbai</li> 
+<li class="animals">9. Beijing</li> 
+<li class="animals">10. Dhaka</li> 
+<li class="animals">11. Osaka</li>
+<li class="animals">12. New York City</li>
+<li class="animals">13. Karachi</li>
+<li class="animals">14. Buenos Aires</li>
+<li class="animals">15. Chongqing</li>
+<li class="animals">16. Istanbul</li>
+<li class="animals">17. Kolkata</li>
+<li class="animals">18. Manila</li>
+<li class="animals">19. Lagos</li>
+<li class="animals">20. Rio de Janeiro</li> 
+</ol> 
+</div>
+</main>
+<script src="main.js"></script> <!--Kopplar samman Java dokumentet-->
+</body>
+<div class="footer"> <!-- footer on page for contact information-->
+<p>
+<a style="color:aliceblue;" >Contact: </a>
+<a style="color: aliceblue;" href="mailto:Marcus.Backholm@live.se">Marcus.Backholm@live.se</a>
+<a style="color: aliceblue;"> Phone: </a>
+<a style="color:aliceblue;" href="tel:+46 73 924 79 77">+46 73 924 79 77</a>
+</p>
+</div>
+</html>
