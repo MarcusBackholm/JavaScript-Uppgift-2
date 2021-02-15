@@ -3,9 +3,9 @@
 let button = document.querySelector('buttonSearch'); // The button.
 let searchbar = document.querySelector('searchbar'); // The searchbar.
 let day = document.querySelector('day') // What day it is.
-let cityname = document.querySelector('cityname') // The name of the city.
 let temperature = document.querySelector('temp') // The remperature.
-let condition = document.querySelector('conditions') // The weather conditions.
+let conditions = document.querySelector('conditions') // The weather conditions.
+let cityname = document.querySelector('cityname') // The name of the city.
 let adress = document.querySelector('adress') // The specified adress.
 let description = document.querySelector('description') // Information at each attraction place.
 
@@ -15,7 +15,7 @@ let description = document.querySelector('description') // Information at each a
 
 //make the button get the API value when searching on citys with given information from API.
 button.addEventListener('click', function(){
-    fetch('http://api.openweathermap.org/data/2.5/weather?q= '+textInput.value+' &appid=d9af8ba6b94987343a5e32bf943c0cd0')
+    fetch('http://api.openweathermap.org/data/2.5/weather?q= '+inputText.value+' &appid=d9af8ba6b94987343a5e32bf943c0cd0')
     .then(Response => Response.json())
     .then(data => {
         let nameValue = data['city'];
