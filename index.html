@@ -10,23 +10,24 @@
                <div class="header">
                    <a class="headertext">City Travel</a>
                </div>
-               <div class="searchwindow"> <!-- Class for searchwindow-->
+               <div class="searchWindow"> <!-- Class for searchwindow-->
                    <div style="position: relative; left: 950px; top: 35px; color: black" id="searchbar" type=text> <!-- Id for searchbar with type of text-->
-                       <input style="height: 50px; width: 300px; color: black;" type="text" placeholder="Search for destination..">
+                       <input style="height: 50px; width: 300px; color: black;" id="inputText" type="text" placeholder="Search for destination..">
                    </div>
-                   <button id="mybutton" style="width: 150px; height: 50px; position: relative; left: 1280px; top: -18px; color: black;" type="button">GO!</button> <!-- creating button with ID-->
+                   <button id="buttonSearch" style="width: 150px; height: 50px; position: relative; left: 1280px; top: -18px; color: black;" type="submit">GO!</button> <!-- creating button with ID-->
                    <form>
-                       <input style="position: relative; left: 1450px; top: -70px;" type="checkbox" id="travel-information1" name="travel-information1" value="Only-weather"> <!-- first checkbox with ID-->
+                       <input style="position: relative; left: 1450px; top: -70px;" type="checkbox" id="onlyWeather" name="travel-information1" value="Only-weather"> <!-- first checkbox with ID-->
                        <label style="position: relative; left: 1450px; top: -70px;"for="travel-information1">Only weather</label>
                        <br>
-                       <input style="position: relative; left: 1450px; top: -70px;"type="checkbox" id="travel-information2" name="travel-information2" value="Only attractions"> <!-- second checkbox with ID-->
+                       <input style="position: relative; left: 1450px; top: -70px;"type="checkbox" id="onlyAttraction" name="travel-information2" value="Only attractions"> <!-- second checkbox with ID-->
                        <label style="position: relative; left: 1450px; top: -70px;"for="travel-information1">Only attractions</label>
                        <br>
-                       <input style="position: relative; left: 1450px; top: -70px;"type="checkbox" id="travel-information3" name="travel-information3" value="Filter alpabetically"> <!-- third checkbox with ID-->
+                       <input style="position: relative; left: 1450px; top: -70px;"type="checkbox" id="sortAlphabetic" name="travel-information3" value="Filter alpabetically"> <!-- third checkbox with ID-->
                        <label style="position: relative; left: 1450px; top: -70px;"for="travel-information1">Filter alpabetically</label>
                        <br>
                    </form>
                </div>
+               <main>
                <div class="box1"> <!-- Class box one!-->
                    <p style="font-size: 50px; position: relative; top: -110px;">Current weather</p>
                    <br/>
@@ -85,6 +86,8 @@
                     <li class="animals">20. Rio de Janeiro</li> 
                 </ol> 
                </div>
+            </main>
+            <script src="main.js"></script> <!--Kopplar samman Java dokumentet-->
           </body>
           <div class="footer"> <!-- footer on page for contact information-->
             <p>
@@ -94,5 +97,4 @@
                 <a style="color:aliceblue;" href="tel:+46 73 924 79 77">+46 73 924 79 77</a>
             </p>
             </div>
-          <script src="main.js"></script> <!--Kopplar samman Java dokumentet-->
     </html>
