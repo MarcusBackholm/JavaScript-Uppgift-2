@@ -27,7 +27,7 @@ const button = document.querySelector('#button'); // Refering to button ID
 
 button.addEventListener('click', event => {
     WeatherBalloon();
-    getFourSquare();
+    GetFourSquare();
 }) 
 
 
@@ -58,8 +58,8 @@ function WeatherBalloon( search ) {
 }
 
 // Getting foursquare API information.
-const forSquareApi = {
-    'https://api.foursquare.com/v2/venues/explore?near':
+function GetFourSquare( search ) {
+fetch('https://api.foursquare.com/v2/venues/explore?near')
     client_id="X5MAVFZN1F5NGMFX1LZ0P2MDFYQEQHPLT0R503XHOJMLEFGY", 
     client_secret="CXO3WOL1BKKHSHCOE3N4XE3T5DRMVFQOW3BVHU5APWCKTC1Q", 
     v="20180323", 
