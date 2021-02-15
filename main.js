@@ -13,9 +13,9 @@
 //                 ID = description
 
 //           Foursquare API
-// client id key: X5MAVFZN1F5NGMFX1LZ0P2MDFYQEQHPLT0R503XHOJMLEFGY
+// client id key:     X5MAVFZN1F5NGMFX1LZ0P2MDFYQEQHPLT0R503XHOJMLEFGY
 // client Secret key: CXO3WOL1BKKHSHCOE3N4XE3T5DRMVFQOW3BVHU5APWCKTC1Q
-//
+// foursquare URL:    https://api.foursquare.com/v2/venues/explore?near
 
 //           OpenWeather API
 // APIkey: d9af8ba6b94987343a5e32bf943c0cd0
