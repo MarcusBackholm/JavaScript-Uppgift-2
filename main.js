@@ -24,9 +24,11 @@
 
 // Creating query for button action. 
 const button = document.querySelector('#button'); // Refering to button ID.
+const post = document.getElementById('box2');
 
 button.addEventListener('click', event => {
     WeatherBalloon();
+    getAttraction();
 }) 
 
 
@@ -42,7 +44,6 @@ function WeatherBalloon( search ) {
         const city = data.name; //constant for searchvalue.
         const temp = data.main.temp; //constant for temperature.
         const weath = data.weather[0].description; //constant for weather.
-        console.log(data); //just some output while testing.
 
         let cityName = document.getElementById('cityName') // refering city name to given element in HTML.
         let temperature = document.getElementById('temperature') // refering temperature name to given element in HTML.
@@ -66,15 +67,43 @@ async function getAttraction() {
     let Day = "0" + cDate.getDate();
     let Month = "0" + (cDate.getMonth() + 1);
     let Year = cDate.getFullYear();
-    let date = '${Year}${Month}${Day}';
+    let date = `${Year}${Month}${Day}`;
 
     let response = await fetch (`https://api.foursquare.com/v2/venues/search?near=${cityName}&client_id=${cID}&client_secret=${cSecret}&v=${date}`
     );
     if (response.ok) {
         let json = await response.json();
         console.log(json);
-        createElementsAttraction(json);
+        GetCityAttraction(json);
     } else {
         alert("The city does not exist. Try another one.")
     }
+}
+
+//Hämtar information angående ställen i staden.
+function GetCityAttraction(json){
+    let amountPosts = 0;
+    let maxAmoutPosts = 10;
+    while (amountPosts < maxAmoutPosts) {
+    const innerDiv = document.createElement("div");
+    const title = document.createElement("h3");
+    const paragraph = document.createElement("p");
+
+    let titleText = json.response.venues[amountPosts].name;
+    let adress = json.response.venues[amountPosts].location.address;
+
+    title.append(titleText);
+    paragraph.append(adress);
+
+    innerDiv.classList.add("attractionFrame");
+    title.classList.add("h3");
+    paragraph.classList.add("p");
+
+    innerDiv.appendChild(title);
+    innerDiv.appendChild(paragraph);
+
+    post.append(innerDiv);
+
+    amountPosts++;
+}
 }
