@@ -26,6 +26,10 @@ button{
     top: 28px;
     color: rgb(0, 0, 0);
 }
+#resetButton{
+    position: relative;
+    left: 1150px;
+}
 
 input{
     position: relative;
@@ -84,9 +88,8 @@ input{
     color: rgb(255, 255, 255);
 }
 
-.box1{
+#box1{
     width: 15%;
-    height: 200px;
     padding: 50px;
     margin: 10px;
     background-color: rgba(54, 54, 54, 0.308);
@@ -97,42 +100,15 @@ input{
     text-align: center;
 }
 
-.box2{
+#box2{
     width: 15%;
-    height: 200px;
-    padding: 50px;
-    margin: 10px;
-    background-color: rgba(54, 54, 54, 0.308);
-    border: 2px solid;
-    position: relative;
-    left: 490px;
-    top: 150px;
-    text-align: center;
-}
-
-.box3{
-    width: 15%;
-    height: 200px;
     padding: 50px;
     margin: 10px;
     background-color: rgba(54, 54, 54, 0.308);
     border: 2px solid;
     position: relative;
     left: 1000px;
-    top: -163px;
-    text-align: center;
-}
-
-.box4{
-    width: 15%;
-    height: 200px;
-    padding: 50px;
-    margin: 10px;
-    background-color: rgba(54, 54, 54, 0.308);
-    border: 2px solid;
-    position: relative;
-    left: 1513px;
-    top: -477px;
+    top: 150px;
     text-align: center;
 }
 
@@ -143,4 +119,11 @@ input{
     width: 100%;
     background-color: rgba(54, 54, 54, 0.308);
     text-align: center;
+    }
+
+    .hidden{
+        visibility: hidden;
+    }
+    .removed{
+        display: none;
     }

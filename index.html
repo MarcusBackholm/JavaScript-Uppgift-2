@@ -16,32 +16,30 @@
        name="search" 
        placeholder="Search for destination..">
 <button id="button" type="submit">GO!</button> <!-- creating button with ID-->
+<button id="resetButton" type="reset">reset search</button>
 <form>
 <input style="position: relative; left: 1450px; top: -25px;"
-       type="checkbox" 
-       id="onlyWeather" 
-       name="travel-information1"> <!-- first checkbox with ID-->
-<label style="position: relative; left: 1450px; top: -25px;"for="travel-information1">Only weather</label>
+       type="checkbox"
+       id="c1"> <!-- first checkbox with ID-->
+<label style="position: relative; left: 1450px; top: -25px;"for="travel-information1">Weather</label>
 <br>
 <input style="position: relative; left: 1450px; top: -25px;"
-       type="checkbox" 
-       id="onlyAttraction" 
-       name="travel-information2"> <!-- second checkbox with ID-->
-<label style="position: relative; left: 1450px; top: -25px;"for="travel-information1">Only attractions</label>
+       type="checkbox"
+       id="c2"> <!-- second checkbox with ID-->
+<label style="position: relative; left: 1450px; top: -25px;"for="travel-information1">Attractions</label>
 <br>
 <input style="position: relative; left: 1450px; top: -25px;"
-       type="checkbox" 
-       id="sortAlphabetic" 
-       name="travel-information3"> <!-- third checkbox with ID-->
-<label style="position: relative; left: 1450px; top: -25px;"for="travel-information1">Filter alpabetically</label>
+       type="checkbox"
+       id="c3"> <!-- third checkbox with ID-->
+<label style="position: relative; left: 1450px; top: -25px;"for="travel-information1">Alpabetically</label>
 <br>
 </form>
 <main>
-<div class="box1"> <!-- Class box one!-->
+<div id="box1"> <!-- Class box one!-->
 <p class="currentWeather" style="font-size: 50px; position: relative; top: -110px;">Current weather</p>
-<h1 id="cityName">Göteborg</h1>
-<h2 id="temperature">Temp: 1</h2>
-<h2 id="weather">Sunny, no winds</h2>
+<h1 id="cityName"></h1>
+<h2 id="temperature"></h2>
+<h2 id="weather"></h2>
 </div>
 <div id="box2"> <!-- Class box two!-->
 <p style="font-size: 50px; position: relative; top: -110px;">attraction</p>

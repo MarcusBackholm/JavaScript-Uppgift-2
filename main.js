@@ -1,29 +1,6 @@
-// input           ID = search            TYPE = text        PLACEHOLDER = Search for destinaton
-// button          ID = button            TYPE = submit
-
-// checkbox 1      ID = onlyWeather       TYPE = Checkbox    NAME = travel-information1 
-// checkbox 2      ID = onlyAttraction    TYPE = Checkbox    NAME = travel-information2
-// checkbox 3      ID = sortAlphabetic    TYPE = Checkbox    NAME = travel-information3
-
-//       KLART     ID = cityName
-//       KLART     ID = temperature
-//       KLART     ID = weather
-
-//                 ID = attractionName
-//                 ID = adress
-//                 ID = information
-
-//           Foursquare API
-// client id key:     X5MAVFZN1F5NGMFX1LZ0P2MDFYQEQHPLT0R503XHOJMLEFGY
-// client Secret key: CXO3WOL1BKKHSHCOE3N4XE3T5DRMVFQOW3BVHU5APWCKTC1Q
-// foursquare URL:    https://api.foursquare.com/v2/venues/explore?
-
-//           OpenWeather API
-// APIkey: d9af8ba6b94987343a5e32bf943c0cd0
-// URL: https://api.openweathermap.org/data/2.5/weather
-
 // Creating query for button action. 
 const button = document.querySelector('#button'); // Refering to button ID.
+const resetSearch = document.getElementById("resetButton");
 const post = document.getElementById('box2');
 
 button.addEventListener('click', event => {
@@ -107,3 +84,37 @@ function GetCityAttraction(json){
     amountPosts++;
 }
 }
+//Event för att dölja attraction fönstret.
+document.getElementById("c1").onchange = function(e){
+    let sec = document.getElementById("box2");
+    sec.classList.toggle("hidden");
+}
+//Event för att ta bort Weather fönstret.
+document.getElementById("c2").onchange = function(e){
+    let sec = document.getElementById("box1");
+    sec.classList.toggle("removed");
+}
+document.getElementById("c3").onchange = function(e){
+    let sec = document.getElementById("box2");
+    return arr.sort(function(a, b) {
+        return a === b ? 0: a > b ? 1 : -1;
+    });
+}
+//Rensar sökhistorik för weather.
+resetSearch.addEventListener("click", () => {
+    let e = document.querySelector("#box1");     
+    let child = e.lastElementChild;  
+    while (child) { 
+        e.removeChild(child); 
+        child = e.lastElementChild; 
+}
+});
+//Rensar sökhistorik för attractions.
+resetSearch.addEventListener("click", () => {
+    let e = document.querySelector("#box2");     
+    let child = e.lastElementChild;  
+    while (child) { 
+        e.removeChild(child); 
+        child = e.lastElementChild; 
+}
+});
