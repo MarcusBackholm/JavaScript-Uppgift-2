@@ -60,7 +60,7 @@ async function getAttraction() {
 //Hämtar information angående ställen i staden.
 function GetCityAttraction(json){
     let amountPosts = 0;
-    let maxAmoutPosts = 10;
+    let maxAmoutPosts = 30;
     while (amountPosts < maxAmoutPosts) {
     const innerDiv = document.createElement("div");
     const title = document.createElement("h3");
@@ -83,6 +83,7 @@ function GetCityAttraction(json){
 
     amountPosts++;
 }
+
 }
 //Event för att dölja attraction fönstret.
 document.getElementById("c1").onchange = function(e){
@@ -94,21 +95,23 @@ document.getElementById("c2").onchange = function(e){
     let sec = document.getElementById("box1");
     sec.classList.toggle("removed");
 }
-document.getElementById("c3").onchange = function(e){
-    let sec = document.getElementById("box2");
-    return arr.sort(function(a, b) {
-        return a === b ? 0: a > b ? 1 : -1;
-    });
+function sortSelect(selElem) {
+    var tmpAry = new Array();
+    for (var i=0;i<selElem.options.length;i++) {
+        tmpAry[i] = new Array();
+        tmpAry[i][0] = selElem.options[i].text;
+        tmpAry[i][1] = selElem.options[i].value;
+    }
+    tmpAry.sort();
+    while (selElem.options.length > 0) {
+        selElem.options[0] = null;
+    }
+    for (var i=0;i<tmpAry.length;i++) {
+        var op = new Option(tmpAry[i][0], tmpAry[i][1]);
+        selElem.options[i] = op;
+    }
+    return;
 }
-//Rensar sökhistorik för weather.
-resetSearch.addEventListener("click", () => {
-    let e = document.querySelector("#box1");     
-    let child = e.lastElementChild;  
-    while (child) { 
-        e.removeChild(child); 
-        child = e.lastElementChild; 
-}
-});
 //Rensar sökhistorik för attractions.
 resetSearch.addEventListener("click", () => {
     let e = document.querySelector("#box2");     
