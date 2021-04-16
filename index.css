@@ -127,3 +127,6 @@ input{
     .removed{
         display: none;
     }
+    .show{
+        display: list-item;
+    }

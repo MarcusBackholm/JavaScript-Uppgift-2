@@ -1,16 +1,13 @@
 // Creating query for button action. 
 const button = document.querySelector('#button'); // Refering to button ID.
-const resetSearch = document.getElementById("resetButton");
+const inputSearch = document.querySelector('#search') // Refering to Searchbar ID.
 const post = document.getElementById('box2');
+const result = document.querySelectorAll('box2');
 
 button.addEventListener('click', event => {
     WeatherBalloon();
     getAttraction();
 }) 
-
-
-// '#' for ID '.' for class.
-const inputSearch = document.querySelector('#search') // Refering to Searchbar ID.
 
 //Getting weather API information. 
 function WeatherBalloon( search ) {
@@ -59,10 +56,12 @@ async function getAttraction() {
 
 //Hämtar information angående ställen i staden.
 function GetCityAttraction(json){
+    clearResults(); // Kallar på funktionen och rensar tidigare sökta resultat ifrån specifik stad.
+
     let amountPosts = 0;
     let maxAmoutPosts = 30;
     while (amountPosts < maxAmoutPosts) {
-    const innerDiv = document.createElement("div");
+    const innerDiv = document.createElement("div"); // Children till Box2.
     const title = document.createElement("h3");
     const paragraph = document.createElement("p");
 
@@ -95,12 +94,11 @@ document.getElementById("c2").onchange = function(e){
     let sec = document.getElementById("box1");
     sec.classList.toggle("removed");
 }
-//Rensar sökhistorik för attractions.
-resetSearch.addEventListener("click", () => {
-    let e = document.querySelector("#box2");     
-    let child = e.lastElementChild;  
-    while (child) { 
-        e.removeChild(child); 
-        child = e.lastElementChild; 
-}
-});
+//Funktion för att ta bort sökta reslutat för attractions.
+function clearResults() {   
+    var box = document.getElementById("box2");
+    while (box.firstChild) {
+        box.removeChild(box.lastChild);
+    }
+    
+}    
